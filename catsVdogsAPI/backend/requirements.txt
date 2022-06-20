@@ -1,0 +1,6 @@
+# backend/requirements.txt
+fastapi==0.78.0
+numpy==1.21.6
+pillow==9.0.1
+python-multipart==0.0.5 
+uvicorn==0.17.6
