@@ -16,7 +16,7 @@ image = st.file_uploader("Choose an image")
 if st.button("Upload"):
     if image is not None :
         files = {"file": image.getvalue()}
-        res = requests.post(f"http://0.0.0.0:8080/catsVdogs/predict", files=files)
+        res = requests.post(f"http://backend:8080/catsVdogs/predict", files=files)
         output = res.json()
         if output['model-prediction'] == 'cat':
             label = 'cat'

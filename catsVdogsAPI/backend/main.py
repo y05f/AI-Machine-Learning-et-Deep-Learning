@@ -9,18 +9,6 @@ import os
 
 app = FastAPI()
 
-origins = ["*"]
-methods = ["*"]
-headers = ["*"]
-
-app.add_middleware(
-    CORSMiddleware, 
-    allow_origins = origins,
-    allow_credentials = True,
-    allow_methods = methods,
-    allow_headers = headers    
-)
-
 model_dir = "./model/modelV-0.h5"
 model = load_model(model_dir)
 
